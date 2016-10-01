@@ -12,7 +12,7 @@ type Collection struct {
 func NewCollection(conn *dbus.Conn, path dbus.ObjectPath) *Collection {
   return &Collection{
     conn: conn,
-    dbus: conn.Object(DBUS_SERVICE_NAME, path),
+    dbus: conn.Object(DBusServiceName, path),
   }
 }
 

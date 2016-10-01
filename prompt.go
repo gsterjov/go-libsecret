@@ -15,7 +15,7 @@ type Prompt struct {
 func NewPrompt(conn *dbus.Conn, path dbus.ObjectPath) *Prompt {
   return &Prompt{
     conn: conn,
-    dbus: conn.Object(DBUS_SERVICE_NAME, path),
+    dbus: conn.Object(DBusServiceName, path),
   }
 }
 
@@ -26,7 +26,7 @@ func (prompt Prompt) Path() dbus.ObjectPath {
 
 
 func isPrompt(path dbus.ObjectPath) bool {
-  promptPath := DBUS_PATH + "/prompt/"
+  promptPath := DBusPath + "/prompt/"
   return strings.HasPrefix(string(path), promptPath)
 }
 

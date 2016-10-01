@@ -12,7 +12,7 @@ type Item struct {
 func NewItem(conn *dbus.Conn, path dbus.ObjectPath) *Item {
   return &Item{
     conn: conn,
-    dbus: conn.Object(DBUS_SERVICE_NAME, path),
+    dbus: conn.Object(DBusServiceName, path),
   }
 }
 

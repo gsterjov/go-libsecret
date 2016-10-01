@@ -4,8 +4,8 @@ import "github.com/godbus/dbus"
 
 
 const (
-  DBUS_SERVICE_NAME = "org.freedesktop.secrets"
-  DBUS_PATH = "/org/freedesktop/secrets"
+  DBusServiceName = "org.freedesktop.secrets"
+  DBusPath = "/org/freedesktop/secrets"
 )
 
 type DBusObject interface {
@@ -27,7 +27,7 @@ func NewService() (*Service, error) {
 
   return &Service{
     conn: conn,
-    dbus: conn.Object(DBUS_SERVICE_NAME, DBUS_PATH),
+    dbus: conn.Object(DBusServiceName, DBusPath),
   }, nil
 }
 

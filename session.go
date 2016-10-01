@@ -12,7 +12,7 @@ type Session struct {
 func NewSession(conn *dbus.Conn, path dbus.ObjectPath) *Session {
   return &Session{
     conn: conn,
-    dbus: conn.Object(DBUS_SERVICE_NAME, path),
+    dbus: conn.Object(DBusServiceName, path),
   }
 }
 

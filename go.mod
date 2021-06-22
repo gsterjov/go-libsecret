@@ -1,4 +1,4 @@
-module github.com/jefferai/go-libsecret
+module github.com/gsterjov/go-libsecret
 
 go 1.15
 
